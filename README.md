@@ -13,4 +13,3 @@
 ##### Utility to manage kafka topics, is basically the sample https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/adminapi.py with a little change in create topic, to pass as a parameter the quantity of partitions and replicas
 
 ##### Sintaxe: python crud_topics.py <brokers> <operation> <arg1> <arg2> ...
-
