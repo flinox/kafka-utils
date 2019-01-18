@@ -18,11 +18,11 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 
 ### Operations:
 >* `create_topic`
->* `delete_topics`
 >* `create_partitions`
 >* `describe_configs`
 >* `alter_configs`
 >* `delta_alter_configs`
+>* `delete_topics`
 >* `list`
 
 ### Samples:
@@ -32,6 +32,16 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 >![Topic created](/crud_topics_create.jpg)
 >![When you list the topic created to check](/crud_topics_create_list.jpg)
 
+>### Create partitions
+>#### `python crud_topics.py <brokers> create_partitions <topic_name> <new_total_partitions>`
+>![Topic created](/crud_topics_partition_create.jpg)
+>![When you list the topic created to check](/crud_topics_partition_create_list.jpg)
+
+>### Describe configs
+>#### `python crud_topics.py <brokers> describe_configs <topic_name> <new_total_partitions>`
+>![Topic created](/crud_topics_partition_create.jpg)
+>![When you list the topic created to check](/crud_topics_partition_create_list.jpg)
+
 >### Delete topics
 >#### `python crud_topics.py <brokers> delete_topics <topic_name1> <topic_name2> ...`
 >![Topic deleted](/crud_topics_delete.jpg)
@@ -40,17 +50,18 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 >#### `python crud_topics.py <brokers> list topics`
 >![List topics](/crud_topics_list.jpg)
 
-> ### List brokers
+>### List brokers
 >#### `python crud_topics.py <brokers> list brokers`
 >![List brokers](/crud_topics_brokers.jpg)
 
-> ### List all
+>### List all
 >#### `python crud_topics.py <brokers> list all`
 >![List topics and brokers](/crud_topics_all.jpg)
 
 
-create_topics <topic> <qtde_part_topic> <qtde_repl_topic>
-delete_topics <topic1> <topic2> ..
+
+
+
 create_partitions <topic1> <new_total_count1> <topic2> <new_total_count2> ..
 describe_configs <resource_type1> <resource_name1> <resource2> <resource_name2> ..
 alter_configs <resource_type1> <resource_name1> <config=val,config2=val2> <resource_type2> <resource_name2> <config..>
