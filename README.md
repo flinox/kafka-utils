@@ -1,5 +1,9 @@
 ## Kafka_utils
-#### Some applications in python to help in creating kafka connectors using Kafka Connect REST Interface, creating avro schemas using Schema Registry API from confluent, crud of topics using confluent_kafka library for confluent python, example of producer / consumer in avro format, create , list, delete streams / tables of confluent ksql, etc.
+#### Some python applications to creating kafka connectors using Kafka Connect REST Interface, to create avro schemas using Schema Registry API provide by confluent, 
+#### crud operations on kafka topics using confluent_kafka library for python provide by confluent, little samples to produce or consume message in avro format from kafka topics, 
+#### crud operations on streams / tables in ksql provided by confluent, etc.
 
+#### Some utilities to help developers work with kafka enviroment.
 
+#### Enjoy!
 
