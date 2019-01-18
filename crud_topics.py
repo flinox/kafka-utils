@@ -16,9 +16,9 @@ import logging
 logging.basicConfig()
 
 
-def example_create_topics(a, topics):
+def example_create_topic(a, topics):
 
-    """ Create topics """
+    """ Create topic """
     new_topics = [NewTopic(topic, num_partitions=int(partition), replication_factor=int(replica)) for topic,partition,replica in zip(topics[0::3],topics[1::3],topics[2::3])]
     # Call create_topics to asynchronously create topics, a dict
     # of <topic,future> is returned.
@@ -264,7 +264,7 @@ if __name__ == '__main__':
     if len(sys.argv) < 3:
         sys.stderr.write('Usage: %s <bootstrap-brokers> <operation> <args..>\n\n' % sys.argv[0])
         sys.stderr.write('operations:\n')
-        sys.stderr.write(' create_topics <topic> <qtde_part_topic> <qtde_repl_topic>\n')
+        sys.stderr.write(' create_topic <topic> <qtde_part_topic> <qtde_repl_topic>\n')
         sys.stderr.write(' delete_topics <topic1> <topic2> ..\n')
         sys.stderr.write(' create_partitions <topic1> <new_total_count1> <topic2> <new_total_count2> ..\n')
         sys.stderr.write(' describe_configs <resource_type1> <resource_name1> <resource2> <resource_name2> ..\n')
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     # Create Admin client
     a = AdminClient({'bootstrap.servers': broker})
 
-    opsmap = {'create_topics': example_create_topics,
+    opsmap = {'create_topic': example_create_topic,
               'delete_topics': example_delete_topics,
               'create_partitions': example_create_partitions,
               'describe_configs': example_describe_configs,
