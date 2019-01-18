@@ -6,4 +6,3 @@
 #### Some utilities to help developers work with kafka enviroment.
 
 #### Enjoy!
-
