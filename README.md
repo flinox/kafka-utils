@@ -9,7 +9,7 @@
 ##### Enjoy!
 
 ***
-## Pre-reqs (commands to install on linux)
+## Pre-reqs
 
 Python 3.6.5 or higher:
 > `sudo apt install python3`
@@ -17,16 +17,16 @@ Python 3.6.5 or higher:
 Python3-pip or pip3:
 > `sudo apt install python3-pip`
 
-After, you need to install all python librarys we will need:
+Python librarys:
 > `sudo pip3 install -r requirements.txt`
 
 
 ## Download
 
-Create a folder, and inside this folder, run the follow command to download the flinox/kafka_utils:
+Now download this package on your folder:
 > `git clone https://github.com/flinox/kafka_utils.git`
 
-
+***
 ## CRUD Topics
 > `crud_topics.py`
 
