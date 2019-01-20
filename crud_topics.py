@@ -1,6 +1,6 @@
 ## Utilitario em python para manutencao de topicos no kafka em python
 ## Sintaxe de uso: python crud_topics.py <lista_de_brokers> <operacao> <argumentos>
-## Source: https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/adminapi.py
+## Source Base: https://github.com/confluentinc/confluent-kafka-python/blob/master/examples/adminapi.py
 ## By: Fernando Lino em 16/01/2019
 ##
 ## https://docs.python.org/3.6/reference/index.html

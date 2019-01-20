@@ -1,0 +1,2 @@
+confluent_kafka>=0.11.6
+javaproperties>=0.5.1
