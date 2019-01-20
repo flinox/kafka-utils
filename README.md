@@ -35,11 +35,11 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 ### Sintaxe: 
 > `python crud_topics.py <brokers> <operation> <arg1> <arg2> ...`
 
-#### Brokers: 
+#### brokers: 
 >* `Your kafka brokers, sample:`
 >* `hostname_or_ip1:port,hostname_or_ip2:port`
 
-#### Operations:
+#### operation:
 >* `create_topic`
 >* `create_partitions`
 >* `describe_configs`
@@ -87,16 +87,19 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 
 
 
-## Create Connector Thru Connect REST API
+## Create Connector
 > `create_connector.py`
 
 Utility to create a connector using Connect REST API, this program will read the .properties file and convert to json format to pass as content to API, it will try to create, if exists will update the connector. 
 
 ### Sintaxe: 
-> `python create_connector.py ./connectors/kafka-tabela.properties <hostname_or_ip_connect_rest_api>:8083 --schema_registry_cloud=<hostname_or_ip_schema_registry_rest_api>:8081`
+> `python create_connector.py ./connectors/<connector.properties> <hostname_or_ip_connect_rest_api>:8083 --schema_registry_cloud=<hostname_or_ip_schema_registry_rest_api>:8081`
 
-#### Hostname or ip of Connect REST API machine: 
+#### connector.properties: 
+>* `The java properties file previously configured to database drivers, tables, querys, passwords, etc.`
+
+#### hostname_or_ip_connect_rest_api: 
 >* `The hostname_/ ip address of the machine running the Connect REST API to create the connector`
 
-#### Schema_Registry_Cloud: 
+#### schema_registry_cloud: 
 >* `This parameter is optional, I use it to create a connector in another Schema Registry machine, so if you use this parameter, the program will override the value.converter.schema.registry.url and key.converter.schema.registry.url when convert the .properties to .json file, the value informed will only persist in the json file`
