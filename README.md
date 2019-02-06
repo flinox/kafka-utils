@@ -87,6 +87,8 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 
 
 
+
+
 ## Create Connector
 > `create_connector.py`
 
@@ -96,10 +98,41 @@ Utility to create a connector using Connect REST API, this program will read the
 > `python create_connector.py ./connectors/<connector.properties> <hostname_or_ip_connect_rest_api>:8083 --schema_registry_cloud=<hostname_or_ip_schema_registry_rest_api>:8081`
 
 #### connector.properties: 
->* `The java properties file previously configured to database drivers, tables, querys, passwords, etc.`
+> `The java properties file previously configured to database drivers, tables, querys, passwords, etc.`
 
 #### hostname_or_ip_connect_rest_api: 
->* `The hostname_/ ip address of the machine running the Connect REST API to create the connector`
+> `The hostname_/ ip address of the machine running the Connect REST API to create the connector`
 
 #### schema_registry_cloud: 
->* `This parameter is optional, I use it to create a connector in another Schema Registry machine, so if you use this parameter, the program will override the value.converter.schema.registry.url and key.converter.schema.registry.url when convert the .properties to .json file, the value informed will only persist in the json file`
+> `This parameter is optional, I use it to create a connector in another Schema Registry machine, so if you use this parameter, the program will override the value.converter.schema.registry.url and key.converter.schema.registry.url when convert the .properties to .json file, the value informed will only persist in the json file`
+
+
+
+
+
+
+## Consume Topic in Avro format
+> `consumer_avro_topic.py`
+
+Utility to consume topic in Avro format, it includes an override on AvroConsumer of confluent to deserialize only the values field, ignoring the key field. 
+
+### Sintaxe: 
+> `python consumer_avro_topic.py <bootstrap> <groupid> <schema_registry> <topic>`
+
+#### bootstrap: 
+> `The list of brokers kafka, ex.: localhost:9092.`
+
+#### groupid: 
+> `To control what messages was read by this groupid, simple a word to used by kafka to control what messages was readed by this groupid.`
+
+#### schema_registry: 
+> `This address to schema registry to obtain the correct schema version to deserialize the message.`
+
+#### topic: 
+> `The topic to obtain the messages.`
+
+
+### Sample:
+
+>##### `python consumer_avro_topic.py localhost:9092 sistema1 localhost:8081 alunos`
+>![Topic created](/images/consumer_avro_topic.jpg)
