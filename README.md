@@ -4,7 +4,7 @@
 
 ##### Some utilities to help developers work with kafka enviroment.
 
-##### Under construction !!!!
+##### If you have sugestions or corrections on this code, let me know to update or upgrade it, this utils is under construction !!!!
 
 ##### Enjoy!
 
