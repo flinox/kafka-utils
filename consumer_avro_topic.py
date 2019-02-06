@@ -1,7 +1,6 @@
 ## Programa exemplo para consumir mensagens de um topico em formato avro apenas para o valor
-## Sintaxe de uso: python create_connector.py <caminho/nome_arquivo.properties> <hostname:8083>
-## Le o arquivo .properties, converte em .json e chama API REST para criar o connector no connect
-## By: Fernando Lino em 05/12/2018
+## Sintaxe de uso: python consumer_avro_topic.py <bootstrap> <groupid> <schema_registry> <topic>
+## By: Fernando Lino em 06/02/2019
 ## python consumer_avro_topic.py localhost:9092 groupid2 localhost:8081 test-avro
 
 from confluent_kafka import KafkaError
