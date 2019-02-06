@@ -48,7 +48,7 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 >* `delete_topics`
 >* `list`
 
-### Samples:
+### Samples
 
 #### Create topic
 >##### `python crud_topics.py <brokers> create_topic <topic_name> <qty_partitions> <qty_replicas>`
@@ -86,9 +86,7 @@ Utility to manage kafka topics, is basically the sample **[confluent-kafka-pytho
 >![List topics and brokers](/images/crud_topics_all.jpg)
 
 
-
-
-
+***
 ## Create Connector
 > `create_connector.py`
 
@@ -108,9 +106,7 @@ Utility to create a connector using Connect REST API, this program will read the
 
 
 
-
-
-
+***
 ## Consume Topic in Avro format
 > `consumer_avro_topic.py`
 
@@ -132,7 +128,7 @@ Utility to consume topic in Avro format, it includes an override on AvroConsumer
 > `The topic to obtain the messages.`
 
 
-### Sample:
+### Sample
 
 >##### `python consumer_avro_topic.py localhost:9092 sistema1 localhost:8081 alunos`
 >![Topic created](/images/consumer_avro_topic.jpg)
